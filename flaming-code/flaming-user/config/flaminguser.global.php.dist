@@ -1,0 +1,28 @@
+<?php
+
+return array(
+	'flaminguser' => array(
+		'user_service' => array(
+			'user_entity' => 'FlamingUser\Entity\User'
+		),
+		
+		'authorization' => array(
+			'redirect_route' => 'home',
+			'login_route' => 'flaminguser/login'
+		),
+
+		'authentication' => array(
+			'success_route' => 'home',
+			'failure_route' => 'flaminguser/login',
+			'logout_route' => 'home',
+			'failed_login_message' => 'Wrong email or password. Please try again.'
+		),
+		
+		// Use session db by default
+		'use_session_db' => true,
+		
+		'session_cleanup' => array(
+			'default_email_receiver' => 'my-receiver@email.invalid'
+		),
+	)
+);

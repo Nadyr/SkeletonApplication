@@ -1,0 +1,22 @@
+<?php
+
+return array(
+	'flamingsms' => array(
+		'sms_service' => array(
+			'outgoing_sms_entity' => 'FlamingSms\Entity\OutgoingSms',
+			'incomming_sms_entity' => 'FlamingSms\Entity\IncommingSms',
+		),
+		
+		'default_gateway_name' => 'coolsms',
+		
+		// Key-value pairs of gateway names and gateway classes
+		'gateway_classmap' => array(
+			'coolsms' => 'FlamingSms\SmsGateway\CoolSms',
+			'fakegw' => 'FlamingSms\SmsGateway\FakeGw',
+		),
+		
+		'sms_queue' => array(
+			'default_email_receiver' => 'my-receiver@email.invalid'
+		),
+	)
+);

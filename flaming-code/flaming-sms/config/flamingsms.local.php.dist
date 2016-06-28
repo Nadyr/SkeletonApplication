@@ -1,0 +1,24 @@
+<?php
+
+return array(
+	'flamingsms' => array(
+		'gateway_config' => array(
+			'coolsms' => array(
+				'url' => 'https://sms.coolsmsc.dk',
+				
+				// These should be set in a *.local.php config file
+				'username' => 'myusername',
+				'password' => 'mypassword',
+				'notification_url' => 'http://my-url.invalid/notification/coolsms'
+			),
+			
+			// For testing purposes you can make your own "gateway" by just saving the messages to a DB
+			'fakegw' => array(
+				'url' => '',
+				'username' => '',
+				'password' => '',
+				'notification_url' => 'http://my-url.invalid/notification/gwexample'
+			),
+		)
+	)
+);
